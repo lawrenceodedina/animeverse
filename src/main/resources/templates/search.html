@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<h2>Results for: <span th:text="${query}"></span></h2>
+
+<div th:each="anime : ${results}">
+    <h3 th:text="${anime.title}"></h3>
+    <p>Score: <span th:text="${anime.score}"></span></p>
+    <img th:src="${anime.images.jpg.image_url}" width="150"/>
+    <hr/>
+</div>
+
+</body>
+</html>

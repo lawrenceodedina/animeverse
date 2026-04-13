@@ -1,17 +1,64 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-  <title>AnimeVerse</title>
-  <style>
-    body { font-family: Arial; background: #111; color: white; }
-    h1 { color: #ff4757; }
-    .card { background: #222; padding: 10px; margin: 10px; border-radius: 8px; }
-  </style>
+    <title>AnimeVerse</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #111;
+            color: white;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #ff4757;
+        }
+
+        .search-box {
+            margin: 20px 0;
+        }
+
+        input {
+            padding: 10px;
+            border-radius: 6px;
+            border: none;
+            width: 300px;
+        }
+
+        .card {
+            background: #222;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+
+        img {
+            margin-top: 5px;
+            border-radius: 6px;
+        }
+    </style>
 </head>
+
 <body>
-  <h1>AnimeVerse 🌸</h1>
-  <div th:each="anime : ${animeList}" class="card">
+
+<h1>AnimeVerse 🌸</h1>
+
+<!-- 🔍 SEARCH BAR -->
+<div class="search-box">
+    <input type="text" id="searchBox" placeholder="Search anime..." />
+</div>
+
+<!-- ⚡ LIVE RESULTS -->
+<div id="results"></div>
+
+<!-- 📺 DEFAULT LIST (optional, you can remove if you want) -->
+<div th:each="anime : ${animeList}" class="card">
     <p th:text="${anime}"></p>
-  </div>
+</div>
+
+<!-- ✅ LOAD JAVASCRIPT -->
+<script src="/js/app.js"></script>
+
 </body>
 </html>
