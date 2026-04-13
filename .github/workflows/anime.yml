@@ -19,4 +19,7 @@ jobs:
         run: mvn clean
       - name: Running unit tests
         run: mvn test
-        
+      - name: Compile the java code and package JAR
+        run: mvn -B compile package
+      
+
