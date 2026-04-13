@@ -21,8 +21,6 @@ jobs:
         run: mvn test
       - name: Compile the java code and package JAR
         run: mvn -Dmaven.test.skip=true -B compile package 
-      - name: Compile the java code and package JAR
-        run: mvn compile package
       - name: Docker login
         uses: docker/login-action@v4
         with:
