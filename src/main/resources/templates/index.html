@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>AnimeVerse</title>
+  <style>
+    body { font-family: Arial; background: #111; color: white; }
+    h1 { color: #ff4757; }
+    .card { background: #222; padding: 10px; margin: 10px; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <h1>AnimeVerse 🌸</h1>
+  <div th:each="anime : ${animeList}" class="card">
+    <p th:text="${anime}"></p>
+  </div>
+</body>
+</html>
