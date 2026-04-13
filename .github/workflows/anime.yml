@@ -42,4 +42,4 @@ jobs:
           context: .
           tags: |
             ${{ secrets.DOCKER_USERNAME }}/animeverse:latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/animeverse:${{github.run_number}}
+            ${{ secrets.DOCKER_USERNAME }}/animeverse:${{github.run_number}}
