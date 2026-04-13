@@ -20,7 +20,7 @@ jobs:
       - name: Running unit tests
         run: mvn test
       - name: Compile the java code and package JAR
-        run: mvn -B compile package -Dmaven.test.skip=true
+        run: mvn -Dmaven.test.skip=true -B compile package 
       - name: Compile the java code and package JAR
         run: mvn compile package
       - name: Docker login
